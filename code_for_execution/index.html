@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript1.js"></script>
+</head>
+
+<body style="background-color: black;">
+    <pre style="color: white; font-family:cursive;font-size: 40px;;"><center>Minesweeper Cricket        <img src="image.png" width="80px" style="-webkit-filter: invert(100%);filter: invert(100%);"></pre>
+    <div id="startpage">
+        <pre style="color: white; font-family: Impact; font:caption;font-size: 20px;">
+<center>This is a very interesting game!!!!!! Play right now!!!!
+<hr>
+
+The rules of the game are very simple...........
+
+Single Player:
+1) You have to randomly select a box in the grid.
+2) If the box contains a fielder, then ""GAME OVER"".
+3) If it does not contain fielder, then you get the points mentioned in the box.
+4) You can get points in the range 1 to 6
+5) The number of fielders in the game are fixed and equal to 11.
+6) The game will continue till either you have covered all the possible boxes for runs or you have met a fielder.
+
+Multiplayer:
+1) The rules of Single Player game work in this mode as well. 
+2) In this case, the player who scores more runs wins.
+3) In case a player encounters a fielder, he is out of the game and the second player plays the rest of the game.
+
+Special Attributes:
+There are two special attributes offered in this game
+1) """Multiplier""" `X2` This attribute multiplies your points by 2 every time you achieve it.
+2) """Protection""" `Pr` This attribute protects you from 1 of the fielders. The more you get these, the protected you are.
+3) The total number of both the attributes are fixed in a game and equal to the grid size you choose.
+
+<hr>
+This game is addictive and involves mental risks. People of weak heart are adviced to just watch the gameplay.<span>😂</span>
+
+<hr>
+<input type="checkbox" id="acceptance_policy" onclick="click_checkbox()"><label for="acceptance_policy" style="color: red;" id="label1">I have read all the instructions and I am ready to play</label><br>
+<label style="color: white;">Choose the type of gameplay:  </label><select name="players" id="players">
+    <option value="SinglePlayer">Single Player</option>
+    <option value="Multiplayer">Multiplayer</option>
+</select>
+<label style="color: white;">Choose the grid:  </label><select name="size" id="size">
+    <option value="6">6X6</option>
+    <option value="7">7X7</option>
+    <option value="9">9X9</option>
+    <option value="11">11X11</option>
+</select>
+<label style="color: white;">Choose the Special Attributes you would like to have:  </label><select name="size" id="attribute">
+    <option value="none">none</option>
+    <option value="X2">Multiplier</option>
+    <option value="Protection">Protection</option>
+    <option value="both">Both</option>
+</select>
+
+<input type="submit" value=" I am ready to play " id="submit" disabled onclick="submitMessage()" style="display:block;margin-left: auto;margin-right: auto; border-radius: 30px; padding: 10px 20px;">
+    </pre>
+    </div>
+    <div id="tables"></div>
+    <table id="board6" class="board6"></table>
+    <table id="board7" class="board7"></table>
+    <table id="board9" class="board9"></table>
+    <table id="board11" class="board11"></table>
+    <pre id="multiplayer1" class="multiplayer" style="color:white;font-size: 20px;"></pre>
+    <pre id="multiplayer2" class="multiplayer" style="color:white;font-size: 20px"></pre>
+    <pre id="score" class="score" style="color: white;font-size: 20px"></pre>
+
+    <!-- <input type="submit" value="Start other gameplay" style="float:right;"> -->
+    <input id="newgame1" class="newgame" type="submit" onclick="playAgain()" hidden value="Restart">
+    <input id="newgame" class="newgame" type="submit" onclick="location.reload()" hidden value="Start other gameplay">
+</body>
+
+</html>
